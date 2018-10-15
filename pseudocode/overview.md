@@ -32,8 +32,11 @@ An example consists of two components, Feature and Label.
 LabeledData := (Feature, Label)
 ```
 
-* **Feature**: Represents a set of binary features compiled for a raw example.
-* **Label**: Either +1 or -1 (for binary classification)
+**Yoav: I made some changes below, please check **
+
+* **Feature vector**: (0,1) vector representing the output of a set of candidate specialist basic rule. **0** = Ignore
+* **Part** An integer representing a partition of the input space into parts **0** = Ignore, **i>0** a part of the input space. Planned use: partition the input space according to a level of a decision tree.
+* **Label**: Either +1 or -1 (for binary classification) More than binary will be reduced to a set of binary su-tasks.
 
 In addition, there are two scenarios in which the examples can be associated with scores (predictions) from some
 version of the trained model.
